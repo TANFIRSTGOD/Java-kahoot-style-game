@@ -1,2 +1,7 @@
 # Java-kahoot-style-game
-Java practice project
+
+Practicing using java with this kahoot game
+
+---
+
+enjoy! it's really bad tho
