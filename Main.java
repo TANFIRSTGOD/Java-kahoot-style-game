@@ -31,6 +31,7 @@ public class Main {
 
                 if (usrOption == 1){ //code if usr chooses to create a quiz
                     System.out.println("Create quiz");
+                    System.out.println(quizzes[0][1]);
                     MakeQuiz.makeQuiz();
                 }
                 else if (usrOption == 2){ //code when usr chooses to play a quiz
