@@ -7,9 +7,14 @@ public class Main {
     static String[] quizzes = {"Default"};
     static String windowTitle = "Trash kahoot";
 
-    public static void quit() {
-        JOptionPane.showMessageDialog(null, "Quitting", windowTitle, 1);
-        System.exit(0);
+    public static int quit() {
+        int option = Integer.parseInt(JOptionPane.showInputDialog("Are you sure you want to quit \n(0) y\n(1) n"));
+
+        if (option == 0){
+            System.exit(0);
+        }
+
+        return 0;
     }
 
     public static void main(String[] args) {
@@ -20,24 +25,23 @@ public class Main {
 
             while (inMainmenue) {
 
-            int usrOption = Integer.parseInt(JOptionPane.showInputDialog("(1) create quiz\n(2) play quiz\n(3) quit app")); //get usr input
+                int usrOption = Integer.parseInt(JOptionPane.showInputDialog("(1) create quiz\n(2) play quiz\n(3) quit app")); //get usr input
 
-            System.out.println(usrOption);
+                System.out.println(usrOption);
 
-            if (usrOption == 1){
-                System.out.println("Create quiz");
+                if (usrOption == 1){
+                    System.out.println("Create quiz");
+                    MakeQuiz.makeQuiz();
+                }
+                else if (usrOption == 2){
+                    System.out.println("Played quiz");
+                }
+                else if (usrOption == 3){
+                    System.out.println("Quit");
+                    quit();
+                }
+
             }
-            else if (usrOption == 2){
-                System.out.println("Played quiz");
-            }
-            else if (usrOption == 3){
-                System.out.println("Quit");
-                inMainmenue = false;
-            }
-
-            quit();
-
-        }
 
     }
 }

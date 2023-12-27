@@ -1,7 +1,12 @@
 import javax.swing.JOptionPane;
 
 public class MakeQuiz {
-    public static void makeQuiz(String quizName, String description) {
-        JOptionPane.showMessageDialog(null, quizName, description, 1);
+    public static String[] makeQuiz() {
+        String[] newQuiz = {};
+
+        String quizName = JOptionPane.showInputDialog("Input quiz name");
+        String quizDescription = JOptionPane.showInputDialog("Input quiz description");
+
+        return newQuiz;
     }
 }
