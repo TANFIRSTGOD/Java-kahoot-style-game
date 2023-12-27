@@ -32,7 +32,12 @@ public class Main {
                 if (usrOption == 1){ //code if usr chooses to create a quiz
                     System.out.println("Create quiz");
                     System.out.println(quizzes[0][1]);
-                    MakeQuiz.makeQuiz();
+
+                    int makeSure = Integer.parseInt(JOptionPane.showInputDialog("(0) to continue\n(1) to cancel")); //check if user wants to continue
+
+                    if (makeSure == 0) {
+                        MakeQuiz.makeQuiz();
+                    }
                 }
                 else if (usrOption == 2){ //code when usr chooses to play a quiz
                     System.out.println("Played quiz");
