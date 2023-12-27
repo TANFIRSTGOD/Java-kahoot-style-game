@@ -16,9 +16,28 @@ public class Main {
 
         JOptionPane.showMessageDialog(null, "Welcome to my bad kahoot clone", windowTitle, 1);
             
-        String usrOption = JOptionPane.showInputDialog("(1) create quiz\n(2) play quiz\n(3) quit app"); //get usr input
+        boolean inMainmenue = true;
 
-        System.out.println(usrOption);
+            while (inMainmenue) {
+
+            int usrOption = Integer.parseInt(JOptionPane.showInputDialog("(1) create quiz\n(2) play quiz\n(3) quit app")); //get usr input
+
+            System.out.println(usrOption);
+
+            if (usrOption == 1){
+                System.out.println("Create quiz");
+            }
+            else if (usrOption == 2){
+                System.out.println("Played quiz");
+            }
+            else if (usrOption == 3){
+                System.out.println("Quit");
+                inMainmenue = false;
+            }
+
+            quit();
+
+        }
 
     }
 }
